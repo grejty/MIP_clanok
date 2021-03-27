@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovak]{babel}
+\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+
+
+\title{Využitie gamifikácie na zlepšenie výučby cudzieho jazyka\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2020/21, vedenie: Ing. Jozef Sitarčík}} 
+
+\author{Lukáš Grejták\\[2pt]
+	{\small Slovenská technická univerzita v Bratislave}\\
+	{\small Fakulta informatiky a informačných technológií}\\
+	{\small \texttt{xgrejtak@stuba.sk}}
+	}
+
+\date{\small 7. november 2020} 
+
+\begin{document}
+\maketitle
+ 
+\begin{abstract}
+Jedna z najväčších výziev, ktorej musí učiteľ čeliť, je udržať si záujem študentov. Môžeme hovoriť o najzaujímavejšej téme na svete, no pokiaľ ju nedokážeme správne sprostredkovať, je to ako keby sme hovorili o varení vody na čaj. Práve tu pomáha tzv. “gamifikácia”. V našej práci sa pokúsime daný pojem ozrejmiť, vysvetliť, čo sú to herné prvky a herný dizajn, uviesť príklady aktuálneho využitia a vysvetliť jej prínosy pre spoločnosť. Zameriame sa najmä na gamifikáciu pri učení cudzích jazykov a na konkrétne aplikácie či hry. V závere by sme chceli objasniť, prečo je využitie gamifikácie dôležité a taktiež zmeniť negatívny názor, ktorý má väčšina ľudí o hrách.
+\end{abstract}
+
+\section{Úvod}
+
+Gamifikácia je v roku 2020 často spomínaný pojem a niet sa čomu čudovať. Posledných pár rokov sa snažíme využívať gamifikáciu naozaj v rôznych oblastiach. V prvom rade sa pozrieme na definíciu gamifikácie pre lepšie pochopenie ďalších častí článku. Budeme sa tým zaoberať v~\ref{cotoje}. časti. Taktiež považujeme za potrebné si vysvetliť, čo sú to herné prvky a herný dizajn, pozrieme sa na to v častiach~\ref{prvky} a~\ref{dizajn}. O využití gamifikácie si povieme v časti ~\ref{vyuzitie}. Po ozrejmení dôležitých pojmov si v časti~\ref{vovzdelavani} povieme o gamifikácii vo vzdelávaní a o jej využití pri výučbe cudzieho jazyka. Neskôr si v častiach~\ref{aplikacie} až~\ref{posledna_aplikacia} ukážeme konkrétne aplikácie na učenie cudzieho jazyka. Náš článok ukončíme zhrnutím v závere.  
+
+\section{Čo je gamifikácia?} \label{cotoje}
+
+Aby sme sa mohli rozprávať o využití gamifikácie, je potrebné si tento pojem najskôr definovať.
+
+Koncept gamifikácie nie je nový, podľa Werbacha a Huntera (2012) sa jedná o použitie herných prvkov a techník herného dizajnu v ne-hernom kontexte\cite{werbach}. 
+
+Aký je teda rozdiel medzi hrou a gamifikáciou? Hry hráme kvôli tomu, aby sme sa zabavili alebo aby sme vyplnili voľný čas. Pri gamifikácii len využívame niektoré prvky hier. \emph{Získavanie bodov, úrovne alebo odznaky použijeme na to, aby sme vyriešili problém v našom reálnom živote}\cite{blog}. 
+
+Poďme si ďalej vysvetliť, čo je to herný dizajn a aké sú herné prvky, ktoré obsahujú aplikácie využívajúce gamifikáciu.
+
+\subsection{Herné prvky} \label{prvky}
+
+Pravidelné vzory, ktoré nájdeme v hrách, sú známe ako herné prvky. Pri gamifikácii poznáme tri základné herné prvky - označované ako "PBL":
+
+\begin{itemize}
+\item \textbf{Points} - body
+\item \textbf{Badges} - odznaky
+\item \textbf{Leaderboards} - rebríčky
+\end{itemize}
+
+Okrem nich samozrejme existuje aj mnoho ďalších:
+
+\begin{center}
+\begin{tabular}{ | m{4cm} | m{10cm}| } 
+
+\hline
+Body & Číselná akumulácia na základe určitých činností \\ 
+\hline
+Odznaky & Vizuálne znázornenie dosiahnutých úspechov \\ 
+\hline
+Rebríčky & Umiestnenie hráčov podľa ich úspechov \\ 
+\hline
+Progresová tabuľka & Ukazuje stav hráča, napríklad koľko nám chýba do nového levelu \\ 
+\hline
+Graf výkonnosti & Ukazuje výkonnosť/aktivitu hráča \\ 
+\hline
+Úlohy & Niektoré z úloh, ktoré musia hráči v hre splniť \\ 
+\hline
+Levely & Sekcia alebo časť hry. \\ 
+\hline
+Avatary & Vizuálna reprezentácia hráča alebo jeho alter ega \\ 
+\hline
+Sociálne prvky & Vzťahy s ostatnými používateľmi počas hry \\ 
+\hline
+Systém odmien/odmeny & Systém motivujúci hráčov k splneniu istej úlohy \\ 
+\hline
+\end{tabular}
+Zdroj:  \cite{hlavnyclanok} 
+\label{tabulka}
+\end{center}
+
+Na diagrame v obrázku \ref{fig:diagraml} máme vysvetlený bodový systém, kde na začiatku začíname s konkrétnymi úlohami, nasleduje takzvaná “win condition”, čo je vlastne stratégia, pomocou ktorej sme schopní dosiahnuť víťazstvo. Ďalej máme odmeny za dosiahnuté úlohy, umiestnenie v  rebríčkoch – za ktoré môžeme dostať rôzne odznaky. A na konci je náš sociálny status, kde je možné vidieť náš level, dosiahnuté úlohy, alebo kde si môžeme vystaviť odznaky.
+
+\begin{figure}
+     \includegraphics[width=0.9\textwidth]{mip diagram.PNG} 
+     \caption{Vysvetlený bodový systém, vytvorené v draw.io} 
+     \label{fig:diagraml} 
+\end{figure}
+
+\subsection{Herný dizajn}\label{dizajn}
+
+Herný dizajn hovorí o tom, ako pripraviť hru, aby ju človek hral dobrovoľne a rád sa k nej vracal. Súčasťou herného dizajnu je okrem vizuálnej stránky hry aj nastavenie náročnosti, rôznych výziev, rozloženie prvkov a zjednodušenie ovládania. Správna hra by nemala byť príliš ľahká, ale ani príliš ťažká, aby to hráč nevzdal. Úlohou herného dizajnu je vytvoriť zlatú strednú cestu, ktorú psychológ Csíkszentmihályi nazýva „Flow“\cite{flow}. 
+
+Ak sú naše schopnosti na vysokej úrovni, ale obtiažnosť hry je príliš nízka, prichádza nuda. Naopak ak je na nás prechádzanie hry príliš ťažké, sme frustrovaní.
+
+\subsection{Využitia gamifikácie}\label{vyuzitie}
+
+Ako sme už spomínali v ~\ref{cotoje}. časti, gamifikácia nie je žiadna novinka. Avšak v dnešnej dobe za pomoci sociálnych médií a internetu je tento koncept aplikovaný na veľa rôznych použití. Medzi niektoré použitia patrí: motivácia zamestnancov, prekonávanie chorôb a porozumenie chorobám, podpora charitatívnych organizácii, podpora lojality zákazníkov, vzdelávanie, štúdium jazykov a iné.
+V súčasnosti existuje niekoľko projektov gamifikácie, ktoré sa odchyľujú od bežných aplikácii na získavanie bodov alebo odznakov
+
+Uvedieme si tri príklady, ktoré ukazujú využitie gamifikácie na naozaj rôznorodé účely:
+\begin{itemize}
+\item \textbf{U.S. Army - Armáda Spojených štátov} – Americká armáda používa hry na výcvikové účely už mnoho rokov. V dnešnej dobe však používajú gamifikáciu aj na finálne náborové misie do Ozbrojených síl Spojených štátov\cite{hlavnyclanok}.
+\item \textbf{Samsung Nation} – V elektronickom priemysle, v ktorom sa Samsung pohybuje, existuje veľký dopyt a konkurencia. Preto pre zákazníkov vytvorili gamifikovaný program sociálnej lojality s názvom Samsung Nation, v ktorom využívajú prvky ako sú odznaky alebo postup cez úrovne. Cez Samsung Nation sa používatelia zapájajú do komunity pri kontrole produktov, sledovaní videí a ďalších aktivitách\cite{hlavnyclanok}.
+\item \textbf{"Chore Wars"} – Jedným z aspektov gamifikácie je to, že na podporu motivácie potrebujeme konkurenciu. Nejedná sa však o negatívne súťaženie, ale o snahu motivovať ľudí k dosiahnutiu cieľa. Chores by sme mohli preložiť ako rutinné práce okolo domu, alebo v dome. Populárne sú najmä v Spojených štátoch amerických, kde na stránke \href{http://www.chorewars.com}{chorewars.com}, môžu medzi sebou súťažiť všetci príslušníci spoločnej domácnosti\cite{hlavnyclanok}.
+\end{itemize}
+
+\section {Gamifikácia vo vzdelávaní a výučbe cudzieho jazyka}\label{vovzdelavani}
+
+Využitie technológií je v 21. storočí už takmer neodmysliteľná súčasť výučby. V priebehu rokov sme zaznamenali dramatické zmeny, ktoré posunuli počítačový hardvér a softvér smerom k výučbe.
+Podľa Werbracha a Huntera (2012) si pred zavedením gamifikácie musíme v prvom rade stanoviť ciele\cite{werbach}. Čo chceme dosiahnuť? Lepšie výsledky? Väčšiu aktivitu? Menej chýb? Doporučuje sa určiť si len jeden cieľ, aby bol výsledok ľahšie dosiahnuteľný a lepšie merateľný.
+
+Dnešná generácia študentov je zvyknutá na blogovanie, hranie hier a spoločenské aktivity. Namiesto e-mailov dávajú prednosť textovým správam. Zameriavajú sa na všetko, čo je založené na webe. Na základe tohto typu študentov existuje veľa inštruktorov, ktorí implementujú niekoľko vyučovacích stratégií - informačné a komunikačné technológie, distribuované vzdelávanie, mobilné vzdelávanie, a vzdelávanie založené na hrách\cite{hlavnyclanok}. Okrem toho títo pedagógovia integrujú do svojej výučby aj gamifikáciu. Podľa správy NMCHorizon Report (2014), Kaplanova univerzita, ktorá uskutočnila pilotný program v jednom zo svojich kurzov za pomoci gamifikácie uvádza nasledovné:
+
+„Známky študentov sa zlepšili o 9\% a počet študentov, ktorí kurz neukončili sa
+znížil o 16\%\cite{horizon}.“
+
+Počítačové hry vo vyučovaní sú spojením hry a vyučovania. Obohacujú, prehlbujú a skvalitňujú vedomosti získané na vyučovaní, spájajú logické myslenie s poznaním, rečou a činnosťou, čo napomáha rozvoju psychiky a pracovných schopností. Sú priamym prejavom študentskej túžby po činnosti, do ktorej sa radi zapájajú. V takejto počítačovej hre nejde o originalitu, ale predovšetkým o premyslené použitie hry v súvislosti s vyučovacou látkou, s osvojovaním si nových vedomostí. Počítačová hra vo výchovno-vzdelávacom procese môže plniť viac významných úloh. Je motivačným prostriedkom pre aktivitu všetkých študentov. Je prostriedkom, ktorým vyvolávame zážitky a radosť, rozvíjame nielen kognitívnu (poznávaciu), ale aj emocionálnu stránku osobnosti žiaka. 
+
+Aby počítačová hra splnila náš výchovný zámer a aby obidve strany mali z hry úžitok, musí byť učiteľ
+schopný hru čo najlepšie uviesť a jej dopad čo najefektívnejšie využiť\cite{hricova}. 
+
+Učitelia by teda mali pri vyučovaní cudzieho jazyka využívať rôzne typy hier. Tieto hry motivujú
+žiakov a uspokojujú ich potrebu hry a manipulácie, a navyše sú dobrým prostriedkom na sústavné
+upevňovanie slovnej zásoby a predchádzanie zabúdaniu. Pri vyučovaní cudzieho jazyka je nevyhnutné striedať viacero rôznorodých aktivít a spestrovať ich rôznymi hrami či humorom.
+
+Dôležitou úlohou vzdelávania v oblasti cudzích jazykov je podpora rozvoja osobnosti študenta. Vytvárajú sa základy pre ďalšie vzdelávanie, rozvíja sa schopnosť žiakov porozumieť vlastnej a cudzej kultúre. Osvojenie si cudzieho jazyka má veľký význam. Prostredníctvom cudzieho jazyka sa žiaci oboznámia so zvyklosťami, spôsobom správania sa ľudí v rôznych krajinách. Znalosti cudzích jazykov vytvárajú podmienky pre nezaujatú otvorenosť pre svet. Východiskom pre výber vyučovacích metód je
+skutočnosť, že komunikačné kompetencie sa nadobúdajú špecifickými formami
+učenia sa\cite{hrehova}. A počítačové hry medzi také patria.
+
+\section {Konkrétne aplikácie na podporu a motiváciu učenia sa cudzieho jazyka}\label{aplikacie}
+
+\subsection {Duolingo}
+Je platforma pre výučbu cudzích jazykov, kde používatelia postupujú po niekoľkých úrovniach. Funguje pre iPhone, iPod Touch, iPad a Android. Obsahuje oblasť rozprávania, počúvania, gramatiky a slovnej zásoby. Používateľ si môže zvoliť medzi šiestimi jazykmi - angličtina, španielčina, portugalčina, taliančina, nemčina a francúzština. Spätná väzba je okamžitá a študent môže ľahko sledovať svoje pokroky. Pedagógovia to môžu využiť ako súčasť každodenných domácich úloh\cite{hlavnyclanok}. 
+\subsection {Class Dojo}
+Class Dojo je školská komunikačná platforma. Učitelia, študenti a rodiny majú možnosť zdieľať to, čo sa v triede učí, prostredníctvom fotografií, videí a správ. Sleduje, zdieľa a hodnotí účasť študentov spolu s okamžitou spätnou väzbou. Umožňuje študentom flexibilne sa adaptovať na nový jazyk. Prístupná je prostredníctvom webového rozhrania alebo aplikácie pre Android a iOS\cite{hlavnyclanok}.
+\subsection {Edmodo}
+Je bezpečná platforma pre vzdelávanie s prvkami gamifikácie, ako sú odznaky a úlohy. Rozhranie je veľmi podobné Facebooku. Študenti môžu komentovať príspevky, zadávať úlohy a sledovať ich postup. Pedagógovia môžu uverejňovať ankety, otvárať diskusie, navrhovať kvízy a zverejňovať úlohy. Je to skvelý motivačný nástroj pre výučbu cudzieho jazyka, pretože podporuje spoločné vzdelávanie a tímovú prácu. Edmodo pracuje s ľubovoľným webovým prehliadačom, iOS, Androidom alebo Windows Phone\cite{hlavnyclanok}.
+\subsection {Socrative}
+Predstavuje inteligentný systém odozvy študentov, ktorý zapája žiakov prostredníctvom inteligentných telefónov, tabletov a notebookov a umožňuje pedagógom ich hodnotiť. Umožňuje používateľom importovať obrázky do ich otázok a obsahuje prvky gamifikácie vrátane živých výsledkov, okamžitej spätnej väzby a analýzy údajov bez námahy. Socrative je dostupný prostredníctvom webového rozhrania a na Android či iOS\cite{hlavnyclanok}.
+\subsection {Brainscape}\label{posledna_aplikacia}
+Pod týmto názvom sa skrýva webová a mobilná aplikácia, ktorá integruje kartičku na sledovanie pokroku študentov. Táto metóda je známa ako opakovanie založené na dôvere. Je to vynikajúci motivátor pre učenie sa slovnej zásoby. Okrem toho poskytuje automatickú spätnú väzbu a špecifické frázy v cieľovom jazyku spolu s tvorbou viet. Pre jazykové karty je k dispozícii zvuk. Vyžaduje od študentov, aby kriticky premýšľali o svojom učení\cite{hlavnyclanok}.
+
+\section* {Záver}\label{zaver}
+
+Pomocou základných definícií a vysvetliviek sa nám podarilo objasniť, čo je gamifikácia a ako funguje. Uviedli sme, že gamifikáciu tvoria herné prvky a herný dizajn, z čoho pozostávajú a ako fungujú. Na diagrame sme si ozrejmili, ako funguje bodový systém. Taktiež sme prezentovali príklady, kde nájdeme gamifikáciu v konkrétnych aplikáciach a jej ďalšie praktické využitia. V závere textu sme predstavili päť konkrétnych aplikácií, ktoré implementujú gamifikáciu. Ukázali sme si, že počítačové hry vo vzdelávaní sú užitočnou pomôckou - či už pre žiakov alebo učiteľov. Vysvetlili sme, ako fungujú, čo využívajú a na akých zariadeniach sú prístupné. Samozrejme o gamifikácii pri výučbe cudzieho jazyka sa dá toho uviesť ešte omnoho viac, no to nebolo cieľom nášho článku. To, čo sme chceli objasniť sa nám podarilo a určite sme aspoň trochu zmiernili negatívne názory o hrách.
+
+\paragraph{Spoločenské súvislosti} Tu by som vyzdvihol, že počas využívania gamifikácie, nedochádza medzi učiteľom a žiakom k sociálnej interakcii, čo môže byť pre niektorých žiakov frustrujúce. Nie každému totiž stačí pracovať na zadaniach cez obrazovku. U niekoho môže hrať významnú rolu práve vizualizácia preberaného učiva. Gamifikácia teda nemusí byť prínosom pre všetkých účastníkov cieľovej skupiny.
+
+\paragraph{Historické súvislosti} Aj keď si tento výraz získal krátku a veľmi úspešnú históriu, koncept používania hier na "spríjemnenie práce“ existuje už nejaký čas. Len nedávno sa vyskytlo veľké množstvo udalostí, ktoré sa spojili na vytvorenie tohto rýchlo-rozvíjajúceho sa konceptu. Oblasť gamifikácie sa exponenciálne rozrástla a získala veľké uznanie najmä vďaka organizačnej úrovni ako nástroj na prilákanie a udržanie talentov.
+
+\paragraph{Technológia a ľudia} Častým používaním a napredovaním gamifikačných aplikácií sa v budúcnosti môže stať, že ľudia spohodlňejú. Nebudú venovať toľko pozornosti reálnemu učeniu sa a trénovaniu jazykových zručností, práve naopak, bude im stačiť vidieť dosiahnuté body v aplikácii alebo dostatočne vysokú pozíciu v rebríčku. Ľudia, ktorí na začiatku mali ambície a chceli zdokonaliť svoj jazyk, budú len strácať čas vo vzdelávacích aplikáciach, avšak reálne nezískajú žiadnu vedomosť.
+
+\bibliography{literatura}
+\bibliographystyle{plain} 
+
+\end{document}
